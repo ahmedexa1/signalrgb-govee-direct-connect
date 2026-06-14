@@ -1,6 +1,13 @@
-# Govee Direct Connect
+# Govee Direct Connect — H6076 fork
 
-[![Click here to add this repo to SignalRGB](https://raw.githubusercontent.com/SRGBmods/QMK-Images/main/images/add-to-signalrgb.png)](https://srgbmods.net/s?p=addon/install?url=https://github.com/fu-raz/signalrgb-govee-direct-connect)
+> Fork of [fu-raz/signalrgb-govee-direct-connect](https://github.com/fu-raz/signalrgb-govee-direct-connect)
+> with one change: **`H6076` added to `GRADIENT_OFF_SKUS`** so the Govee H6076
+> floor lamp uses DreamView **segment mode** (per-LED) instead of stretch mode.
+>
+> **How to use for the H6076:** add the device by its IP, set **LED count = 84**,
+> and choose protocol **Dreamview**. Verified against real hardware at 84 LEDs.
+
+[![Click here to add this repo to SignalRGB](https://raw.githubusercontent.com/SRGBmods/QMK-Images/main/images/add-to-signalrgb.png)](https://srgbmods.net/s?p=addon/install?url=https://github.com/ahmedexa1/signalrgb-govee-direct-connect)
 
 ## Getting started
 This SignalRGB Addon allows you to add Govee devices via a direct IP connection. You control the amount of leds of the device and what protocol is used to communicate with the device. You can even use components to build your exact Govee Glide setup.

@@ -3,6 +3,7 @@ import udp from "@SignalRGB/udp";
 
 const PROTOCOL_SINGLE_COLOR = 3;
 const GRADIENT_OFF_SKUS = [
+    "H6076",
     "H610A",
     "H6056",
     "H6047",
