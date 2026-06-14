@@ -452,10 +452,16 @@ export default class GoveeDevice
             collection = collection.concat(color);
         }
 
+        // The H6076 ignores frames unless the length-low byte is the fixed DreamView
+        // "dreams" magic 0xFA (confirmed on hardware); the computed length (e.g. 0xFE
+        // for 84 LEDs) is rejected. Other SKUs keep the original computed length.
+        let lenHi = (this.sku === "H6076") ? 0x00 : (collection.length >> 8 & 0xFF);
+        let lenLo = (this.sku === "H6076") ? 0xFA : (collection.length & 0xFF);
+
         let dreamViewHeader = [
             0xBB,
-            (collection.length >> 8 & 0xFF),
-            (collection.length & 0xFF),
+            lenHi,
+            lenLo,
             0xB0,
         ];
 
